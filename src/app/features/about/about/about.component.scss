@@ -1,0 +1,128 @@
+html {
+  height: 100%;
+}
+
+body{
+  background-color: black;
+  position: relative;
+}
+
+.container {
+
+}
+
+$black: rgb(197, 198, 199);
+$white: #ffffff;
+
+main {
+  min-width: 300px;
+  max-width: 500px;
+  margin: auto;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #ffffff 0%, #FFBF00 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  color: $black;
+  
+  //numbers
+  &:before {
+    content: counter(section);
+    position: absolute;
+    text-align: center;
+    line-height: 1.25em;
+    color: #FFBF00;
+    font-size: 1em;
+  }
+}
+//odd number borders
+p:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+  
+  &:before {
+    left: 100%; 
+    margin-left: -20px;
+  }
+}
+//even number borders
+p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+  
+  &:before {
+    right: 100%; 
+    margin-right: -20px;
+  }
+}
+//handle first and last
+p:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+p:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
+
+
+.logo{
+ 	background:url("https://media.giphy.com/media/crSSpUUchMHlK/giphy.gif") repeat;
+  background-size: 9rem;
+  background-repeat: round;
+  background-position: center;
+  position: relative;
+ 	-webkit-background-clip: text;
+  color: transparent;
+	font-size:160px;
+  font-family:Helvetica;
+	font-weight:bold;
+  background-position-x: 52%;
+  background-position-y: 48px;
+}
+
+
+.lorem {
+  font-family:Helvetica;
+  color: white;
+  justify-content: center;
+  width: 60%;
+
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgb(255, 255, 255);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  font-size: 14px;
+}

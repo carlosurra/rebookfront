@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One|Oleo+Script');
+@import url('https://fonts.googleapis.com/css?family=Days+One');
+
+$headings-font-family: 'Lobster Two';
+$primary: white;
+$secondary: darkgrey;
+$success: #FFBF00;
+$danger: #E83F6F;
+$info: #FFBF00;
+$warning: #E83F6F;
+$light: #FFBF00;
+$dark: black;
+$enable-gradients: false;
+$spacer: 1rem;
+$border-width: 3px;
+$btn-border-radius: 0.25rem;
+$enable-responsive-font-sizes: true;
+
+@import '~node_modules/bootstrap/scss/bootstrap.scss';
+
+
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+.ng-touched.ng-invalid {
+  @extend .is-invalid;
+}
+
+.ng-touched.ng-valid {
+  @extend .is-valid;
+}
+
+.is-invalid,
+.is-valid {
+  .invalid-feedback {
+    display: block;
+  }
+}
+
+a {
+  cursor: pointer !important;
+}

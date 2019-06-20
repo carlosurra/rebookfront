@@ -1,0 +1,149 @@
+$anims: float, floatReverse,float2, floatReverse2;
+$easeSmooth: cubic-bezier(0.39,0.575,0.28,0.995);
+$color: #595959;
+
+
+  html {
+  margin: 0;
+  padding: 0 4em;
+  
+	}
+
+
+.container {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-size: auto;
+	color: white;
+	font-family: arial, sans-serif;
+  
+}
+
+.content {
+	width: 40%;
+	min-width: 200px;
+	background:black;
+	padding: 40px;
+  text-align: center;
+  border-radius: 4em 8em;
+	box-shadow: -10px 10px 67px -12px rgba(0, 0, 0, 10);
+	opacity: 0; 
+	animation: apparition 0.8s 1.2s $easeSmooth forwards;
+	
+	p {
+		font-size: 1.3rem;
+		margin-top: 0;
+		margin-bottom: 0.6rem;
+		letter-spacing: 0.1rem;
+		color: white;
+		
+		&:last-child{margin-bottom: 0;}
+  }
+  
+  .btn:link,
+  .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(255, 255, 255);
+  }
+  
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-black {
+    font-size: 14px;
+  }
+}
+
+.particle {
+	position: absolute;
+	display: block;
+	pointer-events: none;
+	
+	@for $i from 1 through 80 {
+		&:nth-child(#{$i}){
+			$size: random(20) + 10;
+			$blur: $i * 0.02;
+			$speed: random(20)+20; 
+			$delay: random(10)*0.1;
+			$anim: nth($anims, random(length($anims)));
+			
+			top: random(100) / (100 + $size/8) * 100%;
+			left: random(100) / (100 + $size/10) * 100%;
+			font-size: $size + px;
+			filter: blur( (#{$blur}) + px);
+			animation: $speed+s  $anim infinite;
+		}
+	}
+}
+
+@keyframes apparition {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0);
+	}
+  50% {
+    transform: translateY(180px);
+	}
+}
+
+@keyframes floatReverse {
+  0%,100% {
+    transform: translateY(0);
+	}
+  50% {
+    transform: translateY(-180px);
+  }
+}
+	
+@keyframes float2 {
+  0%,100% {
+    transform: translateY(0);
+	}
+  50% {
+    transform: translateY(28px);
+	}
+}
+
+@keyframes floatReverse2 {
+  0%,100% {
+    transform: translateY(0);
+	}
+  50% {
+    transform: translateY(-28px);
+	}
+}
+
+@mixin animation ($delay, $duration, $animation) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-iteration-count: infinite;
+  animation-fill-mode: unset;
+}

@@ -1,0 +1,180 @@
+<body>
+    <main class="container">
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">rebook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+
+
+        <span class="particle text-info">reBook</span>
+        <span class="particle text-info">reBook</span>
+        <span class="particle text-info">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">rebook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">rebook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">rebook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">rebook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">rebook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-info-50">reBook</span>
+        <span class="particle text-info-50">rebook</span>
+        <span class="particle text-info-50">reBook</span>
+
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+        <span class="particle text-white-50">reBook</span>
+
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+        <span class="particle text-white">reBook</span>
+
+
+  
+  <div class="register">
+  <form 
+  class="signupForm "
+  [formGroup]="registerForm"
+  [rbMarkAsTouched]="registerForm"
+  (ngSubmit)="register()"
+>
+<h2 class="text-info">JOIN US!</h2>
+<div class="form-group">
+  <input
+    class="form-control"
+    type="text"
+    formControlName="name"
+    placeholder="Enter your name"
+  />
+  <rb-val-messages
+    [control]="registerForm.get('fullName')"
+  ></rb-val-messages>
+</div>
+<div class="form-group">
+  <input
+    class="form-control"
+    type="text"
+    formControlName="email"
+    placeholder="Enter your mail"
+  />
+  <rb-val-messages
+    [control]="registerForm.get('email')"
+  ></rb-val-messages>
+</div>
+<div class="form-group">
+  <input
+    class="form-control"
+    type="password"
+    formControlName="password"
+    placeholder="Enter your password"
+  />
+  <rb-val-messages
+    [control]="registerForm.get('password')"
+  ></rb-val-messages>
+</div>
+<div class="form-group">
+  <input
+    class="form-control"
+    type="password"
+    formControlName="confirmPassword"
+    placeholder="Confirm your password"
+  />
+  <rb-val-messages
+    [control]="registerForm.get('confirmPassword')"
+    [group]="registerForm"
+  ></rb-val-messages>
+</div>  
+<div>
+  <button type="submit"
+  class="btn btn-white btn-animated">
+  REGISTER
+</button>
+</div>
+</form>
+</div>
+    </main>
+</body>

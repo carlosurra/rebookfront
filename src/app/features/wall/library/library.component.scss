@@ -1,0 +1,69 @@
+
+.global {
+  margin: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  }
+
+  .card {
+    flex: 0 1 24%;
+    margin-top: 2rem;
+    padding: 2rem;
+    height: 50rem;
+    text-align: center;
+    border-color: #FFBF00;
+    background-color: black;
+    
+}
+
+.btn {
+  margin-top: 1rem;
+}
+
+.btn:visited {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgb(255, 255, 255);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 10px rgba(255, 191, 0, 0.75);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #FFBF00;
+  font-size: 14px;
+  border-radius: 100px;
+}
+
+@media screen and (min-width: 40em) {
+  .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+
+  .card {
+      flex: 0 1 calc(25% - 1em);
+  }
+}
+ 
+  
+  
+  
+  @media (min-width: 768px) {  
+    #max-height {  
+      max-height: 32rem;  
+    }  
+  }

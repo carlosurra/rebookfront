@@ -1,0 +1,34 @@
+<div class="login-container">
+  <form  [formGroup]="loginForm"
+  [rbMarkAsTouched]="loginForm"
+  (ngSubmit)="login()"
+>
+    <div class="form-login">
+      <input 
+      class="form-control text-white"
+      type="text"
+      formControlName="email"
+      placeholder="email">
+      <rb-val-messages
+      [control]="loginForm.get('email')">
+      </rb-val-messages>
+    </div>
+
+    <div class="form-login">
+      <input
+       class="form-control text-white"
+       type="password"
+       formControlName="password"
+       placeholder="password">
+       <rb-val-messages
+       [control]="loginForm.get('password')"
+     ></rb-val-messages> 
+    </div>
+
+    <button 
+    type="submit"
+    class="btn btn-white btn-animated">
+          LOGIN
+    </button>
+  </form>
+</div>

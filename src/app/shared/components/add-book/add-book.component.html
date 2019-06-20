@@ -1,0 +1,61 @@
+<html>
+<body>
+  <main class="container">
+<div class="addbook">
+    <form 
+    class="addbookForm "
+    [formGroup]="addBookForm"
+    [rbMarkAsTouched]="addBookForm"
+    (ngSubmit)="addBook()"
+  >
+  <h2 class="text-info">Clean your shelves, share a book!</h2>
+  <div class="form-group">
+    <input
+      class="form-control"
+      type="text"
+      formControlName="title"
+      placeholder="Title of the book"
+    />
+    <rb-val-book-messages
+      [control]="addBookForm.get('title')"
+    ></rb-val-book-messages>
+  </div>
+  <div class="form-group">
+    <input
+      class="form-control"
+      type="text"
+      formControlName="author"
+      placeholder="Author's name"
+    />
+    <rb-val-book-messages
+      [control]="addBookForm.get('author')"
+    ></rb-val-book-messages>
+  </div>
+  <div class="form-group">
+    <input
+      class="form-control"
+      type="text"
+      formControlName="description"
+      placeholder="Share any information"
+    />
+    <div class="form-group">
+        <input 
+        type="file" 
+        class="form-control-file" 
+        id="exampleFormControlFile1" 
+        placeholder="Upload Cover"
+        >
+      </div>
+  </div>
+  
+  <div>
+    <button type="submit"
+    class="btn btn-white btn-animated">
+    ADD A BOOK
+  </button>
+  </div>
+  </form>
+  </div>
+</main>
+</body> 
+</html> 
